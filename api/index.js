@@ -15,6 +15,14 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/pagina2', (req, res) => {
+  res.render('pagina2', {
+    titulo: 'Sistema Teste',
+    mensagem: 'Aplicacao rodando',
+    data: new Date().toLocaleString('pt-BR')
+  });
+});
+
 if (process.env.NODE_ENV !== 'production') {
   const port = process.env.PORT || 3000;
 
