@@ -4,6 +4,8 @@ require('dotenv').config();
 
 const app = express();
 
+app.use(express.static('public')); // permite acesso à pasta 'public'
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '..', 'view'));
 
